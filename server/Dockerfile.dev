@@ -1,6 +1,5 @@
-FROM node:14.14.0-alpine
+FROM node:14.4.0-alpine
 WORKDIR '/app'
-RUN mkdir -p node_modules/.cache && chmod -R 777 node_modules/.cache
 COPY ./package.json ./
 RUN npm install
 COPY . .
