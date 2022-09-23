@@ -3,4 +3,5 @@ WORKDIR '/app'
 COPY ./package.json ./
 RUN npm install
 COPY . .
-CMD ["npm", "run", "dev"]
+RUN chown -R node:node /app/node_modules
+CMD ["npm", "run", "start"]
